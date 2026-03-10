@@ -6,10 +6,10 @@ Esse projeto visa analizar indicadores de performance voltados a área Logístic
 O Objetivo é demonstrar como dados analíticos conseguem suportar tomadas de decisão logísticas e monitoramente de performance na Cadeia de Suprimentos.
 
 Ferramentas utilizadas:
-Power BI
-Python
-SQL
-Excel
+* Power BI
+* Python
+* SQL
+* Excel
 
 KPIs analisados:
 * OTIF
