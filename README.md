@@ -1,7 +1,8 @@
-# Supply Chain / Logistics Analytics
-Repositório para publicar projetos pessoais voltados a área de Supply Chain e Analytics de Logística, voltados para desenvolvimento pessoal
+# Demand Planning / Accuracy
+Repositório para publicar projetos pessoais voltados para Planejamento de Demanda e Acuracidade
 
-Esse projeto visa analizar indicadores de performance voltados a área Logística como OTIF, Fill Rate, OCT e custos de Frete.
+O Objetivo é analisar dados de uma empresa fictícia X que sofre com excesso de estoque de produtos sazonais e ruptura de produtos Curva A. 
+Assim comparando o plano de demanda (Forecast) com as vendas reais (Actuals), calculando o WMAPE eo BIAS para identificar os produtos com maior desvio e propor ajustes no ciclo de S&OP
 
 O Objetivo é demonstrar como dados analíticos conseguem suportar tomadas de decisão logísticas e monitoramente de performance na Cadeia de Suprimentos.
 
