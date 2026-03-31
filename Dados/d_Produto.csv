@@ -1,0 +1,5 @@
+ID_Produto,Nome_Produto,Categoria,Classificacao_ABC,Custo_Unitario
+101,Leite Vegetal Original 1L,Bebidas,A,8.00
+102,Maionese Vegana 500g,Condimentos,B,12.00
+103,Hamburguer Plant-Based 200g,Congelados,A,15.00
+104,Sorvete Vegano Chocolate 473ml,Sobremesas,C,25.00
