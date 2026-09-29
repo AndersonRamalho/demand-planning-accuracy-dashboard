@@ -21,5 +21,5 @@ Para avaliar o planejamento de demanda, serão criados os seguintes indicadores 
 
 ## 🏗️ Arquitetura e Modelagem de Dados
 O modelo será construído seguindo as práticas do **Star Schema** (Esquema Estrela) para garantir performance no Power BI:
-* **Tabelas Fato:** `f_Vendas_Realizadas`, `f_Forecast_Baseline`
+* **Tabelas Fato:** `f_Vendas`, `f_Forecast`
 * **Tabelas Dimensão:** `d_Calendario`, `d_Produto` (com classificação ABC), `d_Clientes`
