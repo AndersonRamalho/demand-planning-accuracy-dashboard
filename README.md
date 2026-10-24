@@ -6,10 +6,14 @@ No setor de bens de consumo, errar a previsão de demanda gera dois problemas cr
 Este projeto simula os dados de uma empresa de alimentos, comparando as Vendas Realizadas (Actuals) com a Previsão de Demanda (Forecast). O objetivo é fornecer visibilidade sobre a acurácia do planejamento e assim auxiliar na tomada de decisão do time de S&OP.
 
 ## 🛠️ Ferramentas que serão Utilizadas
-* **Power BI:** Criação do Dashboard, modelagem de dados e visualização.
-* **DAX:** Criação de medidas complexas (Inteligência de Tempo, MAPE, BIAS).
-* **Power Query:** Processo de ETL (Limpeza e transformação dos dados brutos).
-* **Excel / CSV:** Base de dados simulada estruturada a partir de lógicas de ERP (ex: SAP S/4 HANA).
+* **Python (Pandas):** Processo de ETL — limpeza, transformação e cálculo dos KPIs de planejamento.
+* **SQL (SQLite):** Consultas analíticas, JOINs e agregações sobre os dados de demanda e vendas.
+* **Plotly:** Criação de gráficos interativos (barras, linhas, gauges, heatmaps)
+* **HTML / CSS / JavaScript:** Dashboard interativo estático, sem necessidade de servidor.
+* **Jinja2:** Motor de templates para gerar o HTML final a partir dos dados processados.
+* **Requests:** Consumo de APIs externas (IBGE, BrasilAPI) para enriquecimento de dados.
+* **CSV:** Base de dados simulada estruturada a partir de lógicas de ERP (ex: SAP S/4 HANA).
+
 
 ## 🧮 KPIs e Métricas Analisadas
 Para avaliar o planejamento de demanda, serão criados os seguintes indicadores de desempenho:
@@ -19,7 +23,23 @@ Para avaliar o planejamento de demanda, serão criados os seguintes indicadores 
   * *BIAS Positivo:* Previsão maior que a venda real (Risco de excesso de estoque).
   * *BIAS Negativo:* Previsão menor que a venda real (Risco de ruptura).
 
+## 🗄️ SQL — Consultas Analíticas com SQLite
+Os CSVs são carregados em um banco **SQLite em memória**, permitindo praticar SQL real sobre os dados do projeto:
+* **JOINs** entre tabelas fato e dimensão (Star Schema).
+* **Agregações** (`SUM`, `GROUP BY`) para totalizar vendas por produto/mês.
+* **Cálculo de KPIs via SQL** (WMAPE, Accuracy, BIAS) usando `CASE`, `ABS`, subqueries.
+* **Views** para encapsular consultas complexas e reutilizá-las nos gráficos.
+
+## 🌐 APIs — Enriquecimento de Dados Externos
+O projeto inclui um módulo de consumo de APIs públicas brasileiras para aprender os conceitos de integração:
+* **API IBGE (Localidades):** Busca lista de estados e municípios para enriquecer a dimensão de clientes com dados geográficos reais.
+* **BrasilAPI / ReceitaWS (CNPJ):** Consulta dados cadastrais de empresas a partir do CNPJ (razão social, endereço, situação cadastral) — simula o enriquecimento de cadastro de clientes/fornecedores.
+
+> As APIs são públicas e gratuitas, servindo como laboratório para entender requisições HTTP, JSON parsing e tratamento de erros.
+
+
+
 ## 🏗️ Arquitetura e Modelagem de Dados
-O modelo será construído seguindo as práticas do **Star Schema** (Esquema Estrela) para garantir performance no Power BI:
+O modelo será construído seguindo as práticas do **Star Schema** (Esquema Estrela):
 * **Tabelas Fato:** `f_Vendas`, `f_Forecast`
 * **Tabelas Dimensão:** `d_Calendario`, `d_Produto` (com classificação ABC), `d_Clientes`
