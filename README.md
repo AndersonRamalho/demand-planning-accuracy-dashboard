@@ -59,7 +59,8 @@ demand-planning-accuracy-dashboard/
 │   └── dashboard.html              # Dashboard pronto para abrir no navegador
 ├── requirements.txt                # Dependências do projeto
 └── README.md
-​```
+```
+
 
 ## 🚀 Como Executar
 1. Clone o repositório:
@@ -76,4 +77,10 @@ demand-planning-accuracy-dashboard/
 3. Gere o dashboard:
    ​```bash
    python src/generate_dashboard.py
-   ​```4. Abra o arquivo `output/dashboard.html` no navegador.
+   ​```
+4. Abra o arquivo `output/dashboard.html` no navegador.
+
+
+## 🔗 Links
+
+* [LinkedIn](https://www.linkedin.com/in/anderson-ramalho-dados/)
