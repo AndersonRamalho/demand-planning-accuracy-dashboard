@@ -19,7 +19,7 @@ def criar_view_analitica(conn):
     )
     SELECT
         f.Data_Mes,
-        strftime('%Y', f.Data_Mes) AS Ano_Mes,
+        strftime('%Y-%m', f.Data_Mes) AS Ano_Mes,
         p.ID_Produto,
         p.Nome_Produto,
         p.Categoria,
@@ -37,7 +37,7 @@ def criar_view_analitica(conn):
     INNER JOIN d_produto p
         ON f.ID_Produto = p.ID_Produto;
     """
-    cursor = conn.cursos()
+    cursor = conn.cursor()
     cursor.execute(query_view)
     conn.commit()
 
@@ -103,3 +103,29 @@ def calcular_kpis(conn):
         "total_previsto": int(df_geral["Total_Previsto"].iloc[0]),
     }
     return kpis_gerais, df_mensal, df_produto
+
+
+if __name__ == "__main__":
+    import sys
+    # Garante que o terminal do Windows suporte caracteres especiais/emojis
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
+    # Teste de execução: conecta no ETL e exibe os resultados no terminal
+    conn = carregar_dados_sqlite()
+    kpis, df_mensal, df_produto = calcular_kpis(conn)
+
+    print("\n" + "=" * 55)
+    print(">> KPIS GERAIS DE DEMAND PLANNING (S&OP)")
+    print("=" * 55)
+    print(f"[*] Forecast Accuracy : {kpis['accuracy']}%")
+    print(f"[*] WMAPE (Erro)      : {kpis['wmape']}%")
+    print(f"[*] BIAS (Vies)       : {kpis['bias']}%")
+    print(f"[*] Total Realizado   : {kpis['total_realizado']:,} un")
+    print(f"[*] Total Previsto    : {kpis['total_previsto']:,} un")
+
+    print("\n--- EVOLUCAO MENSAL ---")
+    print(df_mensal.to_string(index=False))
+
+    print("\n--- PERFORMANCE POR PRODUTO (SKU) ---")
+    print(df_produto.to_string(index=False))
