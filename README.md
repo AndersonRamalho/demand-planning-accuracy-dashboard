@@ -83,4 +83,4 @@ demand-planning-accuracy-dashboard/
 
 ## 🔗 Links
 
-* [LinkedIn](https://www.linkedin.com/in/anderson-ramalho-dados/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-357?style=for-the-badge&logo=linkedin&logoColor=ffff)](https://www.linkedin.com/in/anderson-ramalho/)
