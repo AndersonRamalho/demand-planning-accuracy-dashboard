@@ -1,0 +1,3 @@
+ID_CD,Nome_CD,Cidade,UF,Regiao,Tipo_Operacao,Regioes_Atendidas
+CD01,CD Cajamar,Cajamar,SP,Sudeste,Operador Logístico,"Sudeste, Sul, Centro-Oeste"
+CD02,CD Jaboatão,Jaboatão dos Guararapes,PE,Nordeste,Operador Logístico,"Nordeste, Norte"

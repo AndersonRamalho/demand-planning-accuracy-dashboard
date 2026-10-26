@@ -1,5 +1,31 @@
-ID_Produto,Nome_Produto,Categoria,Classificacao_ABC,Custo_Unitario
-101,Leite Vegetal Original 1L,Bebidas,A,8.00
-102,Maionese Vegana 500g,Condimentos,B,12.00
-103,Hamburguer Plant-Based 200g,Congelados,A,15.00
-104,Sorvete Vegano Chocolate 473ml,Sobremesas,C,25.00
+ID_Produto,EAN,Nome_Produto,Marca,Categoria,Subcategoria,Embalagem,Conteudo,Temperatura,Shelf_Life_Dias,Unid_por_Caixa,Preco_Lista,Custo_Unitario,Data_Lancamento,Data_Descontinuacao,ID_Produto_Substituto,Status_Ciclo_Vida,Sazonal,Classificacao_ABC,Classificacao_XYZ
+101,2900000001015,Leite Vegetal Original 1L,Verde Vivo,Bebidas,Bebida Vegetal 1L,Caixa cartonada,1 L,Ambiente,180,12,12.90,8.00,15/03/2021,,,Ativo,0,A,X
+105,2900000001053,Leite Vegetal Zero Açúcar 1L,Verde Vivo,Bebidas,Bebida Vegetal 1L,Caixa cartonada,1 L,Ambiente,180,12,13.50,8.30,02/08/2021,,,Ativo,0,A,X
+106,2900000001060,Leite Vegetal Chocolate 1L,Verde Vivo,Bebidas,Bebida Vegetal 1L,Caixa cartonada,1 L,Ambiente,180,12,14.20,8.90,07/02/2022,,,Ativo,0,A,X
+107,2900000001077,Leite Vegetal Barista 1L,Verde Vivo,Bebidas,Barista,Caixa cartonada,1 L,Ambiente,180,12,15.90,9.40,06/06/2022,,,Ativo,0,A,X
+108,2900000001084,Leite Vegetal Original 200ml,Verde Vivo,Bebidas,Bebida Vegetal Porção,Caixa cartonada,200 ml,Ambiente,180,27,3.90,2.30,12/09/2022,,,Ativo,0,B,X
+109,2900000001091,Leite Vegetal Chocolate 200ml,Verde Vivo,Bebidas,Bebida Vegetal Porção,Caixa cartonada,200 ml,Ambiente,180,27,4.20,2.50,10/03/2025,,,Ativo,0,C,X
+110,2900000001107,Leite Vegetal Baunilha 1L,Verde Vivo,Bebidas,Bebida Vegetal 1L,Caixa cartonada,1 L,Ambiente,180,12,14.20,8.90,03/04/2023,30/06/2025,,Descontinuado,0,C,Z
+102,2900000001022,Maionese Vegana 500g,Verde Vivo,Condimentos,Maionese,Pote,500 g,Ambiente,270,12,17.50,12.00,15/03/2021,,,Ativo,0,A,X
+111,2900000001114,Maionese Vegana 250g,Verde Vivo,Condimentos,Maionese,Pote,250 g,Ambiente,270,24,9.90,6.40,04/10/2021,,,Ativo,0,A,X
+112,2900000001121,Maionese Vegana Alho 250g,Verde Vivo,Condimentos,Maionese Temperada,Pote,250 g,Ambiente,270,24,10.90,7.00,02/09/2024,,,Ativo,0,B,X
+113,2900000001138,"Maionese Vegana Bisnaga Food Service 1,01kg",Verde Vivo Food Service,Condimentos,Food Service,Bisnaga,"1,01 kg",Ambiente,270,12,29.90,19.50,14/03/2022,,,Ativo,0,B,X
+114,2900000001145,Maionese Vegana Sachê 7g (pct 168un),Verde Vivo Food Service,Condimentos,Food Service,Pacote de sachês,168 x 7 g,Ambiente,270,6,39.90,25.00,09/01/2023,,,Ativo,0,B,X
+115,2900000001152,Maionese Vegana Chipotle 250g,Verde Vivo,Condimentos,Maionese Temperada,Pote,250 g,Ambiente,270,24,11.50,7.40,01/06/2026,,,Lançamento,0,C,Z
+103,2900000001039,Hambúrguer Plant-Based 200g,Brasa Vegetal,Congelados,Hambúrguer,Bandeja,2 x 100 g,Congelado,365,12,22.90,15.00,15/03/2021,,,Ativo,0,A,X
+116,2900000001169,Hambúrguer Plant-Based Food Service 2kg,Brasa Vegetal Food Service,Congelados,Food Service,Caixa,20 x 100 g,Congelado,365,4,119.00,78.00,14/03/2022,,,Ativo,0,A,X
+117,2900000001176,Carne Moída Plant-Based 400g,Brasa Vegetal,Congelados,Carne Moída,Pouch,400 g,Congelado,365,12,24.90,16.20,08/11/2021,,,Ativo,0,A,X
+118,2900000001183,Almôndega Plant-Based 300g,Brasa Vegetal,Congelados,Almôndega,Pouch,300 g,Congelado,365,12,21.90,14.10,01/08/2022,,,Ativo,0,B,X
+119,2900000001190,Frango Vegetal Empanado 300g,Brasa Vegetal,Congelados,Empanados,Caixa,300 g,Congelado,365,12,23.90,15.30,03/02/2025,,,Ativo,0,A,X
+120,2900000001206,Linguiça Plant-Based 300g,Brasa Vegetal,Congelados,Linguiça,Bandeja,300 g,Congelado,365,12,21.50,13.80,02/05/2022,31/03/2026,121,Descontinuado,0,C,Z
+121,2900000001213,Linguiça Plant-Based Toscana 300g,Brasa Vegetal,Congelados,Linguiça,Bandeja,300 g,Congelado,365,12,22.50,14.20,02/02/2026,,,Ativo,0,C,Y
+122,2900000001220,Hambúrguer Plant-Based Smash 320g,Brasa Vegetal,Congelados,Hambúrguer,Caixa,4 x 80 g,Congelado,365,12,26.90,17.60,06/10/2025,,,Ativo,0,A,Y
+104,2900000001046,Sorvete Vegano Chocolate 473ml,Frescor Vegano,Sobremesas,Sorvete Pote,Pote,473 ml,Congelado,365,6,34.90,25.00,08/11/2021,,,Ativo,0,A,Y
+123,2900000001237,Sorvete Vegano Baunilha 473ml,Frescor Vegano,Sobremesas,Sorvete Pote,Pote,473 ml,Congelado,365,6,34.90,25.00,03/10/2022,,,Ativo,0,B,Y
+124,2900000001244,Sorvete Vegano Doce de Leite 473ml - Edição Verão,Frescor Vegano,Sobremesas,Sorvete Pote,Pote,473 ml,Congelado,365,6,36.90,26.00,02/10/2023,,,Ativo - Sazonal,1,B,X
+125,2900000001251,"Sorvete Vegano Chocolate 1,5L",Frescor Vegano,Sobremesas,Sorvete Família,Pote,"1,5 L",Congelado,365,4,69.90,47.00,06/03/2023,,,Ativo,0,A,Y
+126,2900000001268,Queijo Vegetal Fatiado 150g,Verde Vivo Fresh,Refrigerados,Queijo Vegetal,Bandeja,150 g,Refrigerado,60,20,16.90,10.80,04/04/2022,,,Ativo,0,B,X
+127,2900000001275,Queijo Vegetal Parmesão Ralado 100g,Verde Vivo Fresh,Refrigerados,Queijo Vegetal,Pouch,100 g,Refrigerado,90,24,14.90,9.20,06/02/2023,,,Ativo,0,C,X
+128,2900000001282,Requeijão Vegetal 200g,Verde Vivo Fresh,Refrigerados,Requeijão,Copo,200 g,Refrigerado,75,24,13.90,8.60,04/07/2022,,,Ativo,0,B,X
+129,2900000001299,Iogurte Vegetal Morango 170g,Verde Vivo Fresh,Refrigerados,Iogurte,Copo,170 g,Refrigerado,35,24,6.90,4.10,08/05/2023,,,Ativo,0,C,X
+130,2900000001305,Iogurte Vegetal Natural 500g,Verde Vivo Fresh,Refrigerados,Iogurte,Pote,500 g,Refrigerado,35,12,15.90,9.80,06/04/2026,,,Ativo,0,C,Y
